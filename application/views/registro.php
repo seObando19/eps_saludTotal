@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro de usuarios</title>
 </head>
-<body>
-    
+<body>   
     
 </body>
 </html>
