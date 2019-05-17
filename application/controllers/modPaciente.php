@@ -9,16 +9,16 @@ class Modpaciente extends CI_Controller {
         $this->load->library('grocery_CRUD');
 		//instanciar la libreria
         $this->crud=new grocery_CRUD();
-        if(!$this->session->userdata('id'))
+        /*if(!$this->session->userdata('id'))
 	{
 		redirect('login');
-	} 
+	} */
     }
 	public function index()
 	{
 		$data["Usuario"]=$this->session->userdata('nombre');
 		$data["modulo"]="registros";
-		$data['descripcion']="Registro de usuarios";
+		$data["descripcion"]="Registro de usuarios";
 
 		//cargar tema de la tabla flexigrid/datatables
 		$this->crud->set_theme('flexigrid');
@@ -48,10 +48,10 @@ class Modpaciente extends CI_Controller {
 		$tabla=$this->crud->render();
 
 		//los tres componentes que se llaman output,js_files y css_files
-		$data['contenido']=$tabla->output;
-		$data['js_files']=$tabla->js_files;
-		$data['css_files']=$tabla->css_files;
+		$data["contenido"]=$tabla->output;
+		$data["js_files"]=$tabla->js_files;
+		$data["css_files"]=$tabla->css_files;
 
-		$this->load->view('crud',$data);
+		$this->load->view('crud', $data);
 	}
 }

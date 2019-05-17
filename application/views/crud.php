@@ -7,6 +7,7 @@
     <title><?php echo $modulo ?>|<?php echo $descripcion ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
     <?php 
         foreach ($css_files as $css) {
             ?>
@@ -17,9 +18,10 @@
 </head>
 
 <body>
-        <?php echo $contenido; ?>   
 
-        <?php 
+    <?php echo $contenido; ?>
+
+    <?php 
         foreach ($js_files as $js) {
             ?>
             <script type="text/javascript" src="<?php echo $js?>"></script>
