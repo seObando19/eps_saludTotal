@@ -18,7 +18,9 @@
 </head>
 
 <body>
-
+    <br>
+    <a href="<?php echo site_url('principal');?>"><strong>Regresar</strong></a>    
+    <br>
     <?php echo $contenido; ?>
 
     <?php 

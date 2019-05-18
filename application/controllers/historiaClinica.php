@@ -26,9 +26,10 @@ class historiaClinica extends CI_Controller {
 		//cargar la tabla
 		$this->crud->set_table('historia_clinica');
         $this->crud->set_relation("paciente","paciente","nombre");
-        $this->crud->set_relation("paciente","medico","nombre");
+        $this->crud->set_relation("medico","medico","nombre");
 		$this->crud->fields("paciente","medico","lugar_nacim","estatura","peso","profesion","motivo","antecedente","diagnostico","tratamiento");
 		$this->crud->required_fields("paciente","medico","estatura","peso","profesion","motivo","antecedente","diagnostico","tratamiento");
+		$this->crud->set_subject("Listado historias clinicas");
 		$this->crud->display_as('paciente','Seleccione paciente');
 		$this->crud->display_as('medico','Seleccione medico');
 		$this->crud->display_as('estatura','Ingrese estatura');
@@ -39,7 +40,7 @@ class historiaClinica extends CI_Controller {
 		$this->crud->display_as('diagnostico','Ingrese diganostico');
 		$this->crud->display_as('tratamiento','Ingrese tratamiento');		
         $this->crud->columns("paciente","medico","estatura","peso","antecedente","diagnostico","tratamiento","fechaingreso");
-        $this->crud->set_subject("Listado historias clinicas");
+        
 
 		//Aplicar el render  que es ejecutar estas variables y esperar los 3 componentes
 

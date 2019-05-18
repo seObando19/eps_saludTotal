@@ -25,9 +25,10 @@ class Modmedico extends CI_Controller {
 
 		//cargar la tabla
 		$this->crud->set_table('medico');
-		$this->crud->set_relation("ciudad","historia_clinica","lugar_nacim");
+		$this->crud->set_relation("ciudad","ciudad","ciudad");
 		$this->crud->fields('nombre','apellido','telefono','email','direccion','ciudad','identificacion');
 		$this->crud->required_fields('nombre','apellido','telefono','email','direccion','ciudad','identificacion');
+		$this->crud->set_subject("Listado de medicos");
 		$this->crud->display_as('nombre','Digite nombre');
 		$this->crud->display_as('apellido','Digite apellido');
 		$this->crud->display_as('telefono','Digite telefono');
@@ -39,7 +40,7 @@ class Modmedico extends CI_Controller {
 		$this->crud->display_as("fechaingreso","Fecha de registro");
 		$this->crud->display_as("fechamodificacion","Ultima modificacion");
 		$this->crud->columns('nombre','apellido','telefono','email','direccion','ciudad','identificacion');
-		$this->crud->set_subject("Listado de medicos");
+		
 
 		//Aplicar el render  que es ejecutar estas variables y esperar los 3 componentes
 
