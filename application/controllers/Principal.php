@@ -15,6 +15,7 @@ class Principal extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('principal');
+		$data['nombreusuario']=$this->session->userdata('nombre');
+		$this->load->view('principal',$data);
 	}
 }
