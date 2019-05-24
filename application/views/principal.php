@@ -4,31 +4,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Principal</title>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	<title>Bienvenidos al sistema principal</title>
+	<?php include('incluidos/css.php'); ?> 
 </head>
-<body>
-
-<div id="container">
-	<h1>Pag. Principal</h1>
-
-	<div>
-		<a href="<?php echo site_url('modpaciente')?>">Modulo paciente</a>
+<body class="nav-md">
+	<?php include('incluidos/menu_lateral.php'); ?>
+	<?php include('incluidos/menu_derecho.php'); ?>
+	<!-- page content -->
+	<div class="right_col" role="main">
+		<?php include('incluidos/aside.php');?>
+		<?php include('incluidos/caja1.php');?>
 		<br>
-		<a href="<?php echo site_url('modmedico')?>">Modulo medico</a>
-		<br>
-		<a href="<?php echo site_url('historiaclinica')?>">Modulo historias clinicas</a>
-		<br>
-		<a href="<?php echo site_url('modcitas')?>">Modulo citas</a>
-		<br>
-		<a href="<?php echo site_url('modformulamedica')?>">Modulo formulas medicas</a>
-		<br>
-		<a href="<?php echo site_url('modinformes')?>">Modulo informes</a>
+		<?php include('incluidos/caja2.php');?>
+		<?php include('incluidos/caja3.php');?>
+		<?php include('incluidos/caja4.php');?>
+	
 
-	</div>
+	
 
-	<p class="footer">Desarrollado por @DesarrollosSACV</p>
-</div>
-
+	<!--<p class="footer">Desarrollado por @DesarrollosSACV</p>-->
+	<?php include('incluidos/js.php'); ?>
 </body>
 </html>

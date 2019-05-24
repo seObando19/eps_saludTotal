@@ -27,17 +27,17 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-home"></i> Modulos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Pacientes</a></li>
-                      <li><a href="index2.html">Medicos</a></li>
-                      <li><a href="index3.html">Historia clinica</a></li>
-                      <li><a href="index3.html">Citas medicas</a></li>
-                      <li><a href="index3.html">Formula medica</a></li>
-                      <li><a href="index3.html">Informes</a></li>
+                      <li><a href="<?php echo site_url('modpaciente')?>">Pacientes</a></li>
+                      <li><a href="<?php echo site_url('modmedico')?>">Medicos</a></li>
+                      <li><a href="<?php echo site_url('historiaclinica')?>">Historia clinica</a></li>
+                      <li><a href="<?php echo site_url('modcitas')?>">Citas medicas</a></li>
+                      <li><a href="<?php echo site_url('modformulamedica')?>">Formula medica</a></li>
+                      <li><a href="<?php echo site_url('modinformes')?>">Informes</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Complementos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">General Form</a></li>
                       <li><a href="form_advanced.html">Advanced Components</a></li>
