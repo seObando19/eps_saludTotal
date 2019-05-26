@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
     <title><?php echo $modulo ?>|<?php echo $descripcion ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">    

@@ -23,15 +23,15 @@ class Modcitas extends CI_Controller {
 		$this->crud->set_relation("paciente","paciente","nombre");
 		$this->crud->set_relation("medico","medico","nombre");
 		//cargar la tabla
-		$this->crud->fields("paciente","medico","fecha","hora","observaciones");
-		$this->crud->required_fields("paciente","medico","fecha","hora","observaciones");
+		$this->crud->fields("paciente","medico","fecha/hora","observaciones");
+		$this->crud->required_fields("paciente","medico","fecha/hora","observaciones");
 		$this->crud->set_subject("Listado de citas");
 		$this->crud->display_as('paciente','Seleccione paciente');
 		$this->crud->display_as('medico','Seleccione medicos');
-		$this->crud->display_as('fecha','Seleccione fecha');
-		$this->crud->display_as('hora','Ingrese hora');
+		$this->crud->display_as('fecha/hora','Seleccione fecha y hora cita');
+		//$this->crud->display_as('hora','Ingrese hora');
 		$this->crud->display_as('observaciones','Ingrese observacion');
-		$this->crud->columns("paciente","medico","fecha","hora","observaciones");
+		$this->crud->columns("paciente","medico","fecha/hora","observaciones");
 
 		//cargar la vista
 		$tabla=$this->crud->render();
@@ -40,7 +40,8 @@ class Modcitas extends CI_Controller {
 		$data['contenido']=$tabla->output;
 		$data['js_files']=$tabla->js_files;
 		$data['css_files']=$tabla->css_files;
+		$data['nombreusuario']=$this->session->userdata('nombre');
 
-		$this->load->view('crud',$data);
+		$this->load->view('citas',$data);
 	}
 }

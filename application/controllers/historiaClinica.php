@@ -51,7 +51,8 @@ class historiaClinica extends CI_Controller {
 		$data['contenido']=$tabla->output;
 		$data['js_files']=$tabla->js_files;
 		$data['css_files']=$tabla->css_files;
+		$data['nombreusuario']=$this->session->userdata('nombre');
 
-		$this->load->view('crud',$data);
+		$this->load->view('historiaclinica',$data);
 	}
 }

@@ -17,8 +17,8 @@ class Modpaciente extends CI_Controller {
 	public function index()
 	{
 		$data["Usuario"]=$this->session->userdata('nombre');
-		$data["modulo"]="registros";
-		$data["descripcion"]="Registro de usuarios";
+		$data["modulo"]="Pacientes";
+		$data["descripcion"]="Registro de pacientes";
 
 		//cargar tema de la tabla flexigrid/datatables
 		$this->crud->set_theme('flexigrid');
@@ -52,7 +52,7 @@ class Modpaciente extends CI_Controller {
 		$data["contenido"]=$tabla->output;
 		$data["js_files"]=$tabla->js_files;
 		$data["css_files"]=$tabla->css_files;
-
-		$this->load->view('crud', $data);
+		$data['nombreusuario']=$this->session->userdata('nombre');
+		$this->load->view('paciente', $data);
 	}
 }

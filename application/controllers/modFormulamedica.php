@@ -43,6 +43,8 @@ class Modformulamedica extends CI_Controller {
 		$data['contenido']=$tabla->output;
 		$data['js_files']=$tabla->js_files;
 		$data['css_files']=$tabla->css_files;
-		$this->load->view('crud',$data);
+		$data['nombreusuario']=$this->session->userdata('nombre');
+		
+		$this->load->view('formulamedica',$data);
 	}
 }
