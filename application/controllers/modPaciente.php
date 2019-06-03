@@ -8,7 +8,8 @@ class Modpaciente extends CI_Controller {
         parent::__construct();
         $this->load->library('grocery_CRUD');
 		//instanciar la libreria
-        $this->crud=new grocery_CRUD();
+		$this->crud=new grocery_CRUD();
+		$this->load->model('busquedas_model');
         /*if(!$this->session->userdata('id'))
 	{
 		redirect('login');
@@ -53,6 +54,8 @@ class Modpaciente extends CI_Controller {
 		$data["js_files"]=$tabla->js_files;
 		$data["css_files"]=$tabla->css_files;
 		$data['nombreusuario']=$this->session->userdata('nombre');
-		$this->load->view('paciente', $data);
+		$data['cantuser']=$this->busquedas_model->totalPacientes();
+		$data['cantmedico']=$this->busquedas_model->totalMedicos();		
+		$this->load->view('crud', $data);
 	}
 }

@@ -8,6 +8,7 @@ class Ciudad extends CI_Controller {
 		parent::__construct();
 		$this->load->library('grocery_CRUD');
 		$this->crud=new grocery_CRUD();
+		$this->load->model('busquedas_model');
 	}
 	public function index()
 	{
@@ -29,6 +30,8 @@ class Ciudad extends CI_Controller {
 		$data['js_files']=$tabla->js_files;
 		$data['css_files']=$tabla->css_files;
 		$data['nombreusuario']=$this->session->userdata('nombre');
-		$this->load->view('ciudad',$data);
+		$data['cantuser']=$this->busquedas_model->totalPacientes();
+		$data['cantmedico']=$this->busquedas_model->totalMedicos();
+		$this->load->view('crud',$data);
 	}
 }

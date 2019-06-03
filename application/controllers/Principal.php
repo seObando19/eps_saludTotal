@@ -5,7 +5,8 @@ class Principal extends CI_Controller {
 
 	function __construct()
 	{
-		parent::__construct();	
+		parent::__construct();
+		$this->load->model('busquedas_model');	
 		if(!$this->session->userdata('pkid'))
 		{
 			redirect('login');
@@ -16,6 +17,8 @@ class Principal extends CI_Controller {
 	public function index()
 	{
 		$data['nombreusuario']=$this->session->userdata('nombre');
+		$data['cantuser']=$this->busquedas_model->totalPacientes();
+		$data['cantmedico']=$this->busquedas_model->totalMedicos();
 		$this->load->view('principal',$data);
 	}
 }
