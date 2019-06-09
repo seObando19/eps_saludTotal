@@ -39,7 +39,7 @@
                   <li><a><i class="fa fa-edit"></i> Complementos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo site_url('ciudad')?>">Ciudades</a></li>
-                      <li><a href="usuarios">usuarios</a></li>
+                      <li><a href="<?php echo site_url('modusuarios')?>">usuarios</a></li>
                       <li><a href="<?php echo site_url('medicamentos')?>">medicamentos</a></li> 
                     </ul>
                   </li>
@@ -47,6 +47,9 @@
                     <ul class="nav child_menu">
                     <li><a href="<?php echo site_url('modinformes/informesPacientes')?>">Informes Pacientes</a></li>
                     <li><a href="<?php echo site_url('modinformes/informesMedicos')?>">Informes Medicos</a></li>
+                    <li><a href="<?php echo site_url('modinformes/informesCitas')?>">Informes Citas</a></li>
+                    <li><a href="<?php echo site_url('modinformes/informesFormula')?>">Informes Formulas</a></li>
+                    <li><a href="<?php echo site_url('modinformes/informesHistorias')?>">Informes Historias medicas</a></li>
                     </ul>
                   </li>               
                 </ul>

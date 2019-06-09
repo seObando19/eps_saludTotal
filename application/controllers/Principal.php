@@ -12,13 +12,20 @@ class Principal extends CI_Controller {
 			redirect('login');
 		}
 		
-	}
+	}	
 
 	public function index()
-	{
+	{		
 		$data['nombreusuario']=$this->session->userdata('nombre');
 		$data['cantuser']=$this->busquedas_model->totalPacientes();
 		$data['cantmedico']=$this->busquedas_model->totalMedicos();
+		//$data['cualquiera']=$this->cualquierNumero();
 		$this->load->view('principal',$data);
+	}
+	function cualquierNumero()
+	{
+		$d=mt_rand(1,5000);
+		return $d;
+		
 	}
 }

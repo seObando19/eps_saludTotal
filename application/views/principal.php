@@ -21,6 +21,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<?php include('incluidos/aside.php');?>
 		<?php include('incluidos/caja1.php');?>
 		<br>
+		<?php include('incluidos/caja5.php');?>
+		<br>
 	</div>		
 		<?php include('incluidos/footer.php');?>
 	</div>	

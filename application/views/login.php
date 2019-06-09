@@ -32,10 +32,10 @@
 		  	<?php echo form_open('login/acceso') ?>
               <h1>Inicio de sesion</h1>
               <div>
-			  <input type="email" class="form-control" name="correo" id="correo" placeholder="Email"  maxlength="50" required="">
+			  <input autocomplete="off" type="email" class="form-control" name="correo" id="correo" placeholder="Email"  maxlength="50" required="">
               </div>
               <div>
-			  <input type="password" class="form-control" name="clave" id="clave" placeholder="Paswoord" required maxlength="255" required="">
+			  <input autocomplete="off" type="password" class="form-control" name="clave" id="clave" placeholder="Paswoord" required maxlength="255" required="">
               </div>
               <div>
                 <button class="btn btn-default submit" type="submit" name="enviar" id="enviar">Acceder al sistema</button>
@@ -54,7 +54,7 @@
 
                 <div>
                   <h1><i class="fa fa-paw"></i> SaludTotal</h1>
-                  <p>©2019 All Rights Reserved. EPS SaludTotal - developed by <a href="https://github.com/seObando19">Sebastian Obando</a></p>
+                  <p>©2019 All Rights Reserved. EPS SaludTotal - developed by <a href="https://github.com/seObando19">Sebastian Obando</a><a href="https://github.com/anfemoca19">Andres felipe morales</a></p>
                 </div>
               </div>
             </form>
@@ -63,22 +63,22 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <?php echo form_open('login/nuevo') ?>
               <h1>Creacion de usuario</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Nombre" required="" />
+                <input autocomplete="off" id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre" required="" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Correo" required="" />
+                <input autocomplete="off" id="correo" name="correo" type="email" class="form-control" placeholder="Correo" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Contraseña" required="" />
+                <input autocomplete="off" id="clave" name="clave" type="password" class="form-control" placeholder="Contraseña" required="" />
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Telefono" required="" />
+                <input autocomplete="off" id="telefono" name="telefono" type="text" class="form-control" placeholder="Telefono" required="" />
               </div>              
               <div>
-                <a class="btn btn-default submit" href="index.html">Registrarme</a>
+                <button class="btn btn-default submit" name="enviar" id="enviar" type="submit">Registrarme</button>
               </div>
 
               <div class="clearfix"></div>
@@ -93,7 +93,7 @@
 
                 <div>
                   <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2019 All Rights Reserved. EPS SaludTotal - developed by <a href="https://github.com/seObando19">Sebastian Obando</a></p>
+                  <p>©2019 All Rights Reserved. EPS SaludTotal - developed by <a href="https://github.com/seObando19">Sebastian Obando</a><a href="https://github.com/anfemoca19">Andres felipe morales</a></p>
                 </div>
               </div>
             </form>
